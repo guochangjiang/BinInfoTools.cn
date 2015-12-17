@@ -7,20 +7,22 @@
 <h1 style="color:blue">newick格式文件绘制系统进化树</h1>
 
 <!-- <a href=example/example.protein.svg>示例图片</a> -->
-<form name="input" method="post" action="newick.drawer.v1.1.py">
+<form name="input" method="post" action="newick.drawer.and.domian.painter.v1.0.py">
 nwk文件信息:<br> <a href=example/nwk.example.html>格式示例</a> <br> 
 <textarea type="text" name="nwkinfo" style="height:200px;width:500px"></textarea> <br><br>
 最长分支长度(px): <input type="text" name="MaxCladePx" value=500> [默认: 500px]<br>
-分支线宽(px): <input type="text" name="strokewidth" value=2> [默认: 2px]<br>
-相邻分支间距(px): <input type="text" name="GeneInterval" value=25> [默认: 25px]<br><
-分支线颜色: <input type="text" name="linecolor" value='black'> [默认: black]<br><br>
+    分支线宽(px): <input type="text" name="strokewidth" value=2> [默认: 2px]<br>
+相邻分支间距(px): <input type="text" name="GeneInterval" value=25> [默认: 25px]<br>
+      分支线颜色: <input type="text" name="linecolor" value='black'> [默认: black]<br><br>
 
-基因名称字号: <input type="text" name="FontSize" value=14> [默认: 14]<br><br>
+基因名称字号: <input type="text" name="FontSize" value=14> [默认: 14]<br>
 基因名称颜色: <input type="text" name="genecolor" value='black'> [默认: black]<br><br>
+
 bootstrap值颜色: <input type="text" name="bootcolor" value='black'> [默认: black]<br><br>
-比例尺大小(差异度): <input type="text" name="scaleunit" value=0.1> [默认: 0.1]<br><br>
-比例尺线颜色: <input type="text" name="scalecolor" value='black'> [默认: black]<br><br>
-比例尺字体颜色: <input type="text" name="scaletextcolor" value='black'> [默认: black]<br><br>
+
+比例尺大小(差异度): <input type="text" name="scaleunit" value=0.1> [默认: 0.1]<br>
+比例尺线颜色: <input type="text" name="scalecolor" value='black'> [默认: black]<br>
+比例尺字体颜色: <input type="text" name="scaletextcolor" value='black'> [默认: black]<br>
 <input type="submit" value="开始绘制">
 </form>
 <br>

@@ -1,0 +1,44 @@
+<html>
+<title>newick格式进化树与蛋白结构域综合绘图</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<link rel="icon" href="../img/GACT.label.ico" type="image/x-icon" /> 
+<h1 style="color:blue">newick文件系统进化树与蛋白结构域综合绘图</h1>
+
+<!-- <a href=example/example.protein.svg>示例图片</a> -->
+<form name="input" method="post" action="newick.drawer.and.domian.painter.v1.0.py">
+蛋白结构信息:<br> <a href=example/nwk.domain.example.html>格式示例</a> <br> 
+<textarea type="text" name="proteininfo" style="height:200px;width:500px"></textarea> <br><br>
+nwk文件信息:<br> <a href=example/nwk.example.html>格式示例</a> <br> 
+<textarea type="text" name="nwkinfo" style="height:200px;width:500px"></textarea> <br><br>
+
+<input type="submit" value="开始绘制"> <br><br>
+
+<h3>参数设定</h3>
+<h4 style="color:blue">结构域绘图参数</h4>
+每个氨基酸图像长度: <input type="text" name="pxperaa" value=0.5> [默认：0.5px] <br><br>
+结构域矩形高度: <input type="text" name="domainheight" value=10> [默认：10px] <br><br>
+颜色指定:<br> <input type="text" name="colors" value="" style="width:400px"> [默认：内置方案]
+<br><pre style="color:gray">指定方式: domain1:blue;domain2:green;motif1:red;marker1:orange </pre>
+<h4 style="color:blue">进化树绘图参数</h4>
+最长分支长度(px): <input type="text" name="MaxCladePx" value=500> [默认: 500px]<br>
+    分支线宽(px): <input type="text" name="strokewidth" value=2> [默认: 2px]<br>
+相邻分支间距(px): <input type="text" name="GeneInterval" value=25> [默认: 25px]<br>
+      分支线颜色: <input type="text" name="linecolor" value='black'> [默认: black]<br><br>
+
+基因名称字号: <input type="text" name="FontSize" value=14> [默认: 14]<br>
+基因名称颜色: <input type="text" name="genecolor" value='black'> [默认: black]<br><br>
+
+bootstrap值颜色: <input type="text" name="bootcolor" value='black'> [默认: black]<br><br>
+
+比例尺大小(差异度): <input type="text" name="scaleunit" value=0.1> [默认: 0.1]<br>
+比例尺线颜色: <input type="text" name="scalecolor" value='black'> [默认: black]<br>
+比例尺字体颜色: <input type="text" name="scaletextcolor" value='black'> [默认: black]<br>
+
+</form>
+<br>
+<h3>示例图片</h3>
+<img src="example/example.nwk.protdomain.svg"  alt="结构示例图" style="height:500px" />
+
+</html>

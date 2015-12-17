@@ -1,24 +1,25 @@
-€}q(Utest1]qUformqaUtmp]qUoutfileqaUos]q(Upopen4qUexecleqUpopen3q	USEEK_CURq
-UspawnlpqUexeclpqUenvironqUspawnvpqUspawnlqUexecvpqUmakedirsqUlinesepqUP_WAITqUspawnvqUspawnveqUexecvpeqUunsetenvqUSEEK_SETqUgetenvqUpopen2qUwalkqUspawnleqUexeclqUnameqUSEEK_ENDqUspawnlpeq U	P_NOWAITOq!UP_NOWAITq"U
-removedirsq#Urenamesq$Uspawnvpeq%Uexeclpeq&eUPaintProteinStructure.v1.0]q'(Uprotnameq(Ulegendy0q)U
-ProtLenDicq*Ulegendx0q+Uvertical_gradient_domainq,Ucolorq-Udomainq.Uheightq/Upainty0q0U
-charnummaxq1U
-GetProtLenq2Upaintx0q3Ugeneintervalq4Uunitq5Ucharnumq6Uendq7Ustartq8Umaxprotq9UGetDomainInfoq:U	minlengthq;Usegmentsq<U	tagcolorsq=U
-GetTagListq>Utlq?Uaa1q@Ulegendboxy0qAUaa2qBUGetProtListqCUgspaintqDUdefaultcolorsqEUtaglistqFUinfoqGUdoheightqHU	piclengthqIhUprotinfoqJU
-domainsaveqKU
-domaininfoqLU	maxlengthqMU	colordataqNU
-endlegendxqOUproteinlistqPUflagqQUaalengthqRUkeyqSUcpairqTUpairqUUlegendboxx0qVUlineqWUdataqXUGetProtInfoqYU
-GetTagInfoqZUminprotq[UiUlinesq\Ummq]Ulengthq^Udefaultcolors_oriq_Umminfoq`U	domainchrqaeUdatetime]qb(U	timedeltaqcUMAXYEARqdUdateqeUdatetime_CAPIqfUtzinfoqgUtimeqhUMINYEARqiUdatetimeqjeUanimate.example]qk(UrightqlUring_centersqmUelemqnUcyqoUcxqpUnode_radiusqqUedge_strokeqrUfan_distqsU
-edge_colorqtUdwgquUcircle_elemsqvUfinalqwUflashqxUouter_rightqyU	fan_colorqzUanimq{Uleft_circleq|Ucenter_listq}Uanimsq~Uright_circleqUcenter_colorsq€U	all_linesqU
-outer_leftq‚UdU
-big_radiusqƒUcUbUcenterq„UgUiUjUlUnUrUyUfirstq…Uleftq†eUtest]q‡haUnewick.drawer.v1.1]qˆ(Unwkdata2q‰UmU	AllGenePyqŠUcladeidq‹UminyqŒUnwkdataqUGetMinCladeqU	linecolorqU	genecolorqh3h5UGetCladeLenq‘UAllGeneNameq’Uminclaseinfoq“Ulnq”Utextdownq•Unamebackq–Utwoq—U	svgheightq˜UnU	scaleunitq™U	bootcolorqšUmaxyq›U
-MaxCladePxqœU	treepaintqhUscaletextcolorqUscalestrokewidthqŸhQUstrokewidthq UFontSizeq¡Ubootq¢h0hWUGeneIntervalq£UbUlastq¤hUmininfoq¥UAllCladeLenq¦U	svgweihhtq§U
-scalecolorq¨UMaxCladeLengthq©UyUmergelenqªUgeneq«UGetCladeNumLengthq¬Uclademergeidq­Uchnumq®eUshutil]q¯(Ucopyfileq°Uignore_patternsq±Ucopytreeq²Uget_archive_formatsq³Ucopyfileobjq´Uregister_archive_formatqµUcopymodeq¶Umake_archiveq·Umoveq¸Uunregister_archive_formatq¹UrmtreeqºUErrorq»Ucopyq¼U	ExecErrorq½Ucopy2q¾USpecialFileErrorq¿UcopystatqÀUWindowsErrorqÁeUPaintGeneStructure.v1.2]qÂ(UminlocusqÃh,UGetNumRangeqÄUchainqÅh<h:ULocusLenDicqÆUexoninfoqÇU	GetConNumqÈhKU	GetMinMaxqÉUcdsinfoqÊUGetChainOrientationqËUdomaincolorsqÌhZU
-Domain2CDSqÍUvertical_gradient_cdsqÎU
-cdsposdataqÏUutrinfoqĞUGetLocusListqÑh.Unucl0qÒh1UindexqÓhTUkblengthqÔU	intronrefqÕUendcodoninfoqÖU
-domainlistq×UtagsqØUdomain2cdsinfoqÙhSUhalfsegmentsqÚUvertical_gradient_exonqÛUfileformqÜUtimesqİU
-Gff2SimpleqŞh^U	domainsetqßhMUscalexqàUlocusqáhBUgeneinfoqâUmarkerqãUMaxPosqäh5U
-domain_refqåh6U
-markerinfoqæh8h@Uvertical_gradient_stsqçUSortCDSInfoqèUmaxlocusqéhDh)hIhhLU
-indexcolorqêUdomainsetcolorsqëhVhWhGUjUvertical_gradient_utrqìh+h3h4hAUscalelenqíh7h;h=UstsinfoqîUbeginqïUMinPosqğhOhNh0U	locuslistqñhUhXUstcodoninfoqòUih\U
-introninfoqóUmarker2qôeu.
+€}q(Utest1]qUformqaUtmp]qUoutfileqaUnewick.drawer.v1.1]q(Unwkdata2qUmU	AllGenePyqUcladeidq	Uminyq
+UnwkdataqUGetMinCladeqU	linecolorqU	genecolorqUpaintx0qUunitqUGetCladeLenqUAllGeneNameqUminclaseinfoqUlnqUtextdownqUnamebackqUtwoqU	svgheightqUnU	scaleunitqU	bootcolorqUmaxyqU
+MaxCladePxqU	treepaintqUformqUscaletextcolorqUscalestrokewidthq Uflagq!Ustrokewidthq"UFontSizeq#Ubootq$Upainty0q%Ulineq&UGeneIntervalq'UbUlastq(Unameq)Umininfoq*UAllCladeLenq+U	svgweihhtq,U
+scalecolorq-UMaxCladeLengthq.UyUmergelenq/Ugeneq0UGetCladeNumLengthq1Uclademergeidq2Uchnumq3eUPaintProteinStructure.v1.0]q4(Uprotnameq5Ulegendy0q6U
+ProtLenDicq7Ulegendx0q8Uvertical_gradient_domainq9Ucolorq:Udomainq;Uheightq<h%U
+charnummaxq=U
+GetProtLenq>hUgeneintervalq?hUcharnumq@UendqAUstartqBUmaxprotqCUGetDomainInfoqDU	minlengthqEUsegmentsqFU	tagcolorsqGU
+GetTagListqHUtlqIUaa1qJUlegendboxy0qKUaa2qLUGetProtListqMUgspaintqNUdefaultcolorsqOUtaglistqPUinfoqQUdoheightqRU	piclengthqShUprotinfoqTU
+domainsaveqUU
+domaininfoqVU	maxlengthqWU	colordataqXU
+endlegendxqYUproteinlistqZh!Uaalengthq[Ukeyq\Ucpairq]Upairq^Ulegendboxx0q_h&Udataq`UGetProtInfoqaU
+GetTagInfoqbUminprotqcUiUlinesqdUmmqeUlengthqfUdefaultcolors_oriqgUmminfoqhU	domainchrqieUPaintGeneStructure.v1.2]qj(Uminlocusqkh9UGetNumRangeqlUchainqmhFhDULocusLenDicqnUexoninfoqoU	GetConNumqphUU	GetMinMaxqqUcdsinfoqrUGetChainOrientationqsUdomaincolorsqthbU
+Domain2CDSquUvertical_gradient_cdsqvU
+cdsposdataqwUutrinfoqxUGetLocusListqyh;Unucl0qzh=Uindexq{h]Ukblengthq|U	intronrefq}Uendcodoninfoq~U
+domainlistqUtagsq€Udomain2cdsinfoqh\Uhalfsegmentsq‚Uvertical_gradient_exonqƒUfileformq„Utimesq…U
+Gff2Simpleq†hfU	domainsetq‡hWUscalexqˆUlocusq‰hLUgeneinfoqŠUmarkerq‹UMaxPosqŒhU
+domain_refqh@U
+markerinfoqhBhJUvertical_gradient_stsqUSortCDSInfoqUmaxlocusq‘hNh6hShhVU
+indexcolorq’Udomainsetcolorsq“h_h&hQUjUvertical_gradient_utrq”h8hh?hKUscalelenq•hAhEhGUstsinfoq–Ubeginq—UMinPosq˜hYhXh%U	locuslistq™h^h`UstcodoninfoqšUihdU
+introninfoq›Umarker2qœeUdatetime]q(U	timedeltaqUMAXYEARqŸUdateq Udatetime_CAPIq¡Utzinfoq¢Utimeq£UMINYEARq¤Udatetimeq¥eUanimate.example]q¦(Urightq§Uring_centersq¨Uelemq©UcyqªUcxq«Unode_radiusq¬Uedge_strokeq­Ufan_distq®U
+edge_colorq¯Udwgq°Ucircle_elemsq±Ufinalq²Uflashq³Uouter_rightq´U	fan_colorqµUanimq¶Uleft_circleq·Ucenter_listq¸Uanimsq¹Uright_circleqºUcenter_colorsq»U	all_linesq¼U
+outer_leftq½UdU
+big_radiusq¾UcUbUcenterq¿UgUiUjUlUnUrUyUfirstqÀUleftqÁeUtest]qÂhaUshutil]qÃ(UcopyfileqÄUignore_patternsqÅUcopytreeqÆUget_archive_formatsqÇUcopyfileobjqÈUregister_archive_formatqÉUcopymodeqÊUmake_archiveqËUmoveqÌUunregister_archive_formatqÍUrmtreeqÎUErrorqÏUcopyqĞU	ExecErrorqÑUcopy2qÒUSpecialFileErrorqÓUcopystatqÔUWindowsErrorqÕeUos]qÖ(Upopen4q×UexecleqØUpopen3qÙUSEEK_CURqÚUspawnlpqÛUexeclpqÜUenvironqİUspawnvpqŞUspawnlqßUexecvpqàUmakedirsqáUlinesepqâUP_WAITqãUspawnvqäUspawnveqåUexecvpeqæUunsetenvqçUSEEK_SETqèUgetenvqéUpopen2qêUwalkqëUspawnleqìUexeclqíh)USEEK_ENDqîUspawnlpeqïU	P_NOWAITOqğUP_NOWAITqñU
+removedirsqòUrenamesqóUspawnvpeqôUexeclpeqõeU%newick.drawer.and.domian.painter.v1.0]qö(h9h$hhh]hDhIhMhTh#h)h,h-h/h;hhhhUdomainpaintx0q÷hhh5hOhPhh[h\h(h+hfhWh0h3h7h:h<h%hhh>hhhChhhHhBhJhLhRhhVhZh!h&h'hQUbh*hUnh	h
+hhhAhEhhGhhhhghXh h"h^h`hahcUih2Umh.Uyh1eu.
