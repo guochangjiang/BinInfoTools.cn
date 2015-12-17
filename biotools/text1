@@ -1,0 +1,4 @@
+#text1::-webkit-input-placeholder::after {
+    display:block;
+    content:"Line 2\A Line 3";
+}

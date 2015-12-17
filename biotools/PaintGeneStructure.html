@@ -1,0 +1,33 @@
+<html>
+<title>基因结构图绘制</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<link rel="icon" href="../img/GACT.label.ico" type="image/x-icon" /> 
+<h1 style="color:blue">基因结构图绘制</h1>
+
+<!-- <a href=example/example.gff.svg>示例图片</a> -->
+<form name="input" method="post" action="PaintGeneStructure.v1.2.py" method="get">
+基因结构信息:<br> <a href=example/gff.example.html>gff格式示例</a> <br> 
+<a href=example/simple.example.html>simple格式示例</a> <br> 
+<textarea type="text" name="geneinfo" style="height:200px;width:500px"></textarea> <br><br>
+信息格式: <br>
+	<input type="radio" name="formatbutton" value="gff" checked> gff 
+	<input type="radio" name="formatbutton" value="simple"> simple <br><br>
+内含子位置判定(如为gff格式需指定，无exon时请指定CDS]):<br> 
+	<input type="radio" name="refbutton" value="exon" checked> exon 
+	<input type="radio" name="refbutton" value="CDS"> CDS <br><br>
+内含子线型: <br> 
+	<input type="radio" name="intronline" value="直线" checked> 直线 
+	<input type="radio" name="intronline" value="折线"> 折线 <br><br>
+每kb图像长度:<br> <input type="text" name="pxperkb" value=250> [默认：250px] <br><br>
+颜色指定:<br> <input type="text" name="colors" value="" style="width:400px"> [默认：内置方案] 指定方式: CDS:blue;domain:green <br><br>
+
+<input type="submit" value="开始绘制">
+</form>
+<br>
+<h3>示例图片</h3>
+<img src="example/example.gff.svg"  alt="svg结构示例图" style="height:500px" />
+
+</html>
+

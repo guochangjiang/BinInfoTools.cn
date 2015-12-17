@@ -1,0 +1,42 @@
+<html>
+<title>基因结构图绘制</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<link rel="icon" href="../img/GACT.label.ico" type="image/x-icon" /> 
+<h1 style="color:blue">蛋白结构域图绘制</h1>
+
+<!-- <a href=example/example.protein.svg>示例图片</a> -->
+<form name="input" method="post" action="PaintProteinStructure.v1.0.py">
+蛋白结构信息:<br> <a href=example/protein.domain.example.html>格式示例</a> <br> 
+<textarea type="text" name="proteininfo" style="height:200px;width:500px"></textarea> <br><br>
+每个氨基酸图像长度: <input type="text" name="pxperaa" value=1> [默认：1px] <br><br>
+结构域矩形高度: <input type="text" name="domainheight" value=25> [默认：25px] <br><br>
+颜色指定:<br> <input type="text" name="colors" value="" style="width:400px"> [默认：内置方案]
+<br>
+<pre style="color:gray">指定方式: domain1:blue;domain2:green;motif1:red;marker1:orange </pre><br>
+
+<h2 style="color:blue">显示控制</h2>
+基因名: 
+<input type="radio" name="showname" value="on" checked> 显示 
+	<input type="radio" name="showname" value="off"> 不显示 <br><br>
+标尺: 
+	<input type="radio" name="scalecontrol" value="on" checked> 显示 
+	<input type="radio" name="scalecontrol" value="off"> 不显示 <br><br>
+结构域原位显示: (测试功能)
+	<input type="radio" name="showdomain" value="on" checked> 显示 
+	<input type="radio" name="showdomain" value="off" > 不显示 <br><br>
+图例: 
+	<input type="radio" name="showlegend" value="on" checked> 显示 
+	<input type="radio" name="showlegend" value="off" > 不显示 <br><br>
+结构域以外标签: 
+	<input type="radio" name="showmm" value="on" checked> 显示 
+	<input type="radio" name="showmm" value="off" > 不显示 <br><br>
+<input type="submit" value="开始绘制">
+</form>
+<br>
+<h3>示例图片</h3>
+<img src="example/example.protein.svg"  alt="结构示例图" style="height:500px" />
+
+</html>
+

@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<h1 style="color:blue">蛋白结构格式示例</h1>
+<pre>
+注意：
+#蛋白总长用protein表示，结构域用domain表示，还支持motif和marker标签，但是后三者不可以同名
+#蛋白名称中不能具有空格
+
+#protein_ID	label	start	end	tag
+protein-1	protein	1	1000	-
+protein-1	domain	50	500	NBS
+protein-1	domain	700	900	LRR
+protein-1	motif	30	40	motif1
+protein-1	marker	600	603	marker1
+protein-2	protein	1	800	-
+protein-2	domain	20	100	PPR
+protein-2	domain	300	500	TF
+protein-2	motif	600	650	motif2
+protein-2	marker	780	785	marker2
+</pre>

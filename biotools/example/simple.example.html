@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<h1 style="color:blue">simple格式示例</h1>
+<pre>
+注意：
+#exon与CDS必备其一，且需要内含子和链向信息
+#基因名放在第一列，标签放在第二列，位置分别在三四列，链向为最后一列
+#除domain以氨基酸序列进行定位外，其他均以基因序列进行定位
+
+#locus	label	100	50000	+
+gene1	utr	564	1999	+
+gene1	utr	38001	40000	+
+gene1	utr	42001	43259	+
+gene1	utr	47024	49056	+
+gene1	cds	2000	4101	+
+gene1	start_codon	2000	2002	+
+gene1	cds	12113	15327	+
+gene1	cds	18001	21056	+
+gene1	cds	29075	31597	+
+gene1	cds	32678	38000	+
+gene1	stop_codon	37998	38000	+
+gene1	intron	4102	12112	+
+gene1	intron	15328	18000	+
+gene1	intron	21057	29074	+
+gene1	intron	31598	32677	+
+gene1	intron	40001	42000	+
+gene1	intron	43260	47023	+
+gene1	marker	32780	32781	"X"
+gene1	marker	37780	37781	"Y"
+gene1	domain	500	1000	NB_ARC
+gene1	domain	1900	2000	LRR
+gene2	utr	564	4101	-
+gene2	utr	12113	14321	-
+gene2	cds	14322	15327	-
+gene2	cds	29075	31597	-
+gene2	intron	4102	12112	-
+gene2	intron	15328	29074	-
+gene3	exon	14322	15327	+
+gene3	exon	29075	31597	+
+gene3	exon	32678	38000	+
+gene3	intron	15328	29074	+
+gene3	intron	31598	32677	+
+gene3	utr	38001	40000	+
+gene3	domain	500	800	XXX
