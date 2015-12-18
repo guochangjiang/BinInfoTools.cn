@@ -181,6 +181,10 @@ try:
     nwkdata = form["nwkinfo"].value
 except:
     print("<h2 style=\"color:red;font-size:20px\"> The Newick information cannnot be blank</h2>")
+try:
+    protinfo = form["proteininfo"].value
+except:
+    print("<h2 style=\"color:red;font-size:20px\"> The information of protein structure cannnot be blank</h2>")
 
 nwkdata = nwkdata.strip()
 nwkdata2 = ''
@@ -248,10 +252,6 @@ for color in defaultcolors_ori:
 ######################
 #信息处理
 ######################
-try:
-    protinfo = form["proteininfo"].value
-except:
-    print("<h2 style=\"color:red;font-size:20px\"> The information of protein structure cannnot be blank</h2>")
 protinfo = protinfo.strip()
 data = protinfo.splitlines()
 
