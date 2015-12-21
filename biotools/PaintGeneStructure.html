@@ -7,10 +7,14 @@
 <h1 style="color:blue">基因结构图绘制</h1>
 
 <!-- <a href=example/example.gff.svg>示例图片</a> -->
-<form name="input" method="post" action="PaintGeneStructure.v1.2.py" method="get">
+<form name="input" method="post" action="PaintGeneStructure.v1.2.py">
 基因结构信息:<br> <a href=example/gff.example.html>gff格式示例</a> <br> 
 <a href=example/simple.example.html>simple格式示例</a> <br> 
 <textarea type="text" name="geneinfo" style="height:200px;width:500px"></textarea> <br><br>
+<p class="frm">
+或者上传基因结构信息文件(暂未支持):<br>
+<input name="FILE" class="formtext" type="file"></p>
+
 信息格式: <br>
 	<input type="radio" name="formatbutton" value="gff" checked> gff 
 	<input type="radio" name="formatbutton" value="simple"> simple <br><br>

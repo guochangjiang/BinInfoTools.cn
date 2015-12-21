@@ -4,6 +4,8 @@
 import cgi
 import re
 import svgwrite
+import cgitb
+cgitb.enable()
 
 #################
 ##子例程
@@ -177,13 +179,17 @@ def GetDomainInfo(locus, tag, info):
 ##主程序
 print("Content-Type: text/html; charset=utf-8\n\n")
 form = cgi.FieldStorage()
-try:
+if form["NWKFILE"].value.decode() == '':
     nwkdata = form["nwkinfo"].value
-except:
+else:
+    nwkdata = re.sub("\r\n", "\n", form["NWKFILE"].value.decode())
+if nwkdata == '':
     print("<h2 style=\"color:red;font-size:20px\"> The Newick information cannnot be blank</h2>")
-try:
+if form["PROTFILE"].value.decode() == '':
     protinfo = form["proteininfo"].value
-except:
+else:
+    protinfo = re.sub("\r\n", "\n", form["PROTFILE"].value.decode())
+if protinfo == '':
     print("<h2 style=\"color:red;font-size:20px\"> The information of protein structure cannnot be blank</h2>")
 
 nwkdata = nwkdata.strip()

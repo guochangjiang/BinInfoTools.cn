@@ -3,17 +3,20 @@
 import cgi
 import re
 import os
-
+import cgitb
+cgitb.enable()
 print("Content-Type: text/html; charset=utf-8\n\n")
 #print("hello中国")
 form = cgi.FieldStorage()
 intronref = form["refbutton"].value
 intronref = intronref.lower()
-try:
+if form["FILE"].value.decode() == '':
     geneinfo = form["geneinfo"].value
-except:
+else:
+    geneinfo = re.sub("\r\n", "\n", form["FILE"].value.decode())
+if geneinfo == '':
     print("<h2 style=\"color:red;font-size:20px\"> The information of gene structure cannnot be blank</h2>")
-    #os._exit(0)
+
 
 
 ################
@@ -319,12 +322,15 @@ for key in sorted(LocusLenDic.keys()):
 ##绘画准备
 ######################
 import svgwrite
-painty0 = 25                             #起始y轴位置
-paintx0=10                               #起始x轴位置
-legendx0 = 900                           #图例x轴位置
-legendboxx0 = legendx0 - 5               #图例框x轴位置
-piclength = 1000.0                       #基因图长度
-geneinterval = 50.0                      #相邻基因间隔
+painty0 = 25                                     #起始y轴位置
+paintx0=10                                       #起始x轴位置
+legendx0 = 900                                   #图例x轴位置
+legendboxx0 = legendx0 - 5                       #图例框x轴位置
+piclength = 1000.0                               #基因图长度
+rectheight = form["rectheight"].value     #矩形框高度
+markerheight = str(float(rectheight) * 1.8)
+utrheight = str(float(rectheight)/2)
+geneinterval = 50.0                              #相邻基因间隔
 
 
 kblength = form["pxperkb"].value
@@ -432,14 +438,14 @@ for locus in locuslist:
     if len(utrinfo) > 0:
         gspaint.add(gspaint.rect(
             insert = (legendx0, legendy0+1.5),
-            size = ("40px", "12px"),
+            size = ("40px", utrheight+"px"),
             stroke_width = 0.5,
             stroke = "black",
             fill = vertical_gradient_utr.get_paint_server(default='currentColor')
         ))
         gspaint.add(gspaint.text(
             "utr",
-            insert = (legendx0 + 50, legendy0+12),
+            insert = (legendx0 + 50, legendy0+5+float(utrheight)/2),
             font_size = 12,
             fill = 'black'))
         legendy0 += 25
@@ -505,8 +511,8 @@ for locus in locuslist:
                 begin = end
             length = length / times
             gspaint.add(gspaint.rect(
-                insert = ((begin - MinPos ) / times + paintx0, painty0 - 5),
-                size = (str(length) + "px", "25px"),
+                insert = ((begin - MinPos ) / times + paintx0, painty0 + 7.5 - float(rectheight)/2),
+                size = (str(length) + "px", rectheight+"px"),
                 stroke_width = 1,
                 stroke = "black",
                 fill = vertical_gradient_exon.get_paint_server(default='currentColor')
@@ -516,14 +522,14 @@ for locus in locuslist:
         if len(exoninfo) > 0:
             gspaint.add(gspaint.rect(
                 insert = (legendx0, legendy0),
-                size = ("40px", "25px"),
+                size = ("40px", rectheight+"px"),
                 stroke_width = 1,
                 stroke = "black",
                 fill = vertical_gradient_exon.get_paint_server(default='currentColor')
             ))
             gspaint.add(gspaint.text(
                 "exon",
-                insert = (legendx0 + 50, legendy0+16),
+                insert = (legendx0 + 50, legendy0+4.5+0.5*float(rectheight)),
                 font_size = 12,
                 fill = 'black'))
             legendy0 += 35
@@ -545,8 +551,8 @@ for locus in locuslist:
             begin = end
         length = length / times
         gspaint.add(gspaint.rect(
-            insert = ((begin - MinPos)/times + paintx0, painty0+1.5),
-            size = (str(length) + "px", "12px"),
+            insert = ((begin - MinPos)/times + paintx0, painty0+7.5-0.5*float(utrheight)),
+            size = (str(length) + "px", utrheight+"px"),
             stroke_width = 0.5,
             stroke = "black",
             fill = vertical_gradient_utr.get_paint_server(default='currentColor')
@@ -568,8 +574,8 @@ for locus in locuslist:
             begin = end
         length = length / times
         gspaint.add(gspaint.rect(
-            insert = ((begin - MinPos) / times + paintx0, painty0 - 5),
-            size = (str(length) + "px", "25px"),
+            insert = ((begin - MinPos) / times + paintx0, painty0 + 7.5 - float(rectheight)/2),
+            size = (str(length) + "px", rectheight+"px"),
             stroke_width = 1,
             stroke = "black",
             fill = vertical_gradient_cds.get_paint_server(default='currentColor'),
@@ -580,14 +586,14 @@ for locus in locuslist:
     if len(cdsinfo) > 0:
         gspaint.add(gspaint.rect(
             insert = (legendx0, legendy0),
-            size = ("40px", "25px"),
+            size = ("40px", rectheight+"px"),
             stroke_width = 1,
             stroke = "black",
             fill = vertical_gradient_cds.get_paint_server(default='currentColor')
         ))
         gspaint.add(gspaint.text(
             "CDS",
-            insert = (legendx0 + 50, legendy0+16),
+            insert = (legendx0 + 50, legendy0+4.5+0.5*float(rectheight)),
             font_size = 12,
             fill = 'black'))
         legendy0 += 35
@@ -610,8 +616,8 @@ for locus in locuslist:
             begin = end
         length = length / times
         gspaint.add(gspaint.rect(
-            insert = ((begin - MinPos) / times + paintx0, painty0 - 5),
-            size = (str(length) + "px", "25px"),
+            insert = ((begin - MinPos) / times + paintx0, painty0 + 7.5 - float(rectheight)/2),
+            size = (str(length) + "px", rectheight+"px"),
             stroke_width = 1,
             stroke = "black",
             fill = vertical_gradient_sts.get_paint_server(default='currentColor')
@@ -623,14 +629,14 @@ for locus in locuslist:
         vertical_gradient.add_stop_color(1, 'white')
         gspaint.add(gspaint.rect(
             insert = (legendx0, legendy0),
-            size = ("40px", "25px"),
+            size = ("40px", rectheight+"px"),
             stroke_width = 1,
             stroke = "black",
             fill = vertical_gradient.get_paint_server(default='currentColor')
         ))
         gspaint.add(gspaint.text(
             "CDS",
-            insert = (legendx0 + 50, legendy0+16),
+            insert = (legendx0 + 50, legendy0+4.5+0.5*float(rectheight)),
             font_size = 12,
             fill = 'black'))
         legendy0 += 35
@@ -683,8 +689,8 @@ for locus in locuslist:
                 begin = end
             length = length / times
             gspaint.add(gspaint.rect(
-                insert = ((begin - MinPos) / times + paintx0, painty0 - 5),
-                size = (str(length) + "px", "25px"),
+                insert = ((begin - MinPos) / times + paintx0, painty0 + 7.5 - float(rectheight)/2),
+                size = (str(length) + "px", rectheight+"px"),
                 stroke_width = 1,
                 stroke = "black",
                 fill = vertical_gradient_domain.get_paint_server(default='currentColor')
@@ -693,14 +699,14 @@ for locus in locuslist:
             if domain not in domainsave:
                 gspaint.add(gspaint.rect(
                     insert = (legendx0, legendy0),
-                    size = ("40px", "25px"),
+                    size = ("40px", rectheight+"px"),
                     stroke_width = 1,
                     stroke = "black",
                     fill = vertical_gradient_domain.get_paint_server(default='currentColor')
                 ))
                 gspaint.add(gspaint.text(
                     domain,
-                    insert = (legendx0 + 50, legendy0+16.5),
+                    insert = (legendx0 + 50, legendy0+4+0.5*float(rectheight)),
                     font_size = 12,
                     fill = 'black'))
                 legendy0 += 35
@@ -734,14 +740,14 @@ for locus in locuslist:
         if length < 2:
             length = 2
         gspaint.add(gspaint.rect(
-            insert = ((begin - MinPos) / times + paintx0, painty0 - 12.5),
-            size = (str(length) + "px", "40px"),
+            insert = ((begin - MinPos) / times + paintx0, painty0 + 7.5 - float(markerheight)/2),
+            size = (str(length) + "px", markerheight+"px"),
             stroke_width = 1,
             stroke = tagcolors["start_codon"],
             fill = tagcolors["start_codon"]))
         gspaint.add(gspaint.text(
             "ATG",
-            insert = ((begin - MinPos) / times + paintx0 - 10, painty0 + 42),
+            insert = ((begin - MinPos) / times + paintx0 - 10, painty0 - float(markerheight) / 2 + 3),
             font_size = 10,
             fill = 'black'))
 
@@ -761,14 +767,14 @@ for locus in locuslist:
         if length < 2:
             length = 2
         gspaint.add(gspaint.rect(
-            insert = ((begin - MinPos)/times - 2 + paintx0, painty0 - 12.5),
-            size = (str(length) + "px", "40px"),
+            insert = ((begin - MinPos)/times - 2 + paintx0, painty0 + 7.5 - float(markerheight)/2),
+            size = (str(length) + "px", markerheight+"px"),
             stroke_width = 1,
             stroke = tagcolors["stop_codon"],
             fill = tagcolors["stop_codon"]))
         gspaint.add(gspaint.text(
             "TAG",
-            insert = ((begin - MinPos) / times - 10 + paintx0, painty0 + 42),
+            insert = ((begin - MinPos) / times - 10 + paintx0, painty0 - float(markerheight) / 2 + 3),
             font_size = 10,
             fill = 'black'))
 
@@ -788,8 +794,8 @@ for locus in locuslist:
         if length < 2:
             length = 2
         gspaint.add(gspaint.rect(
-            insert = ((begin - MinPos)/times - 2 + paintx0, painty0 - 12.5),
-            size = (str(length) + "px", "40px"),
+            insert = ((begin - MinPos)/times - 2 + paintx0, painty0 + 7.5 - float(markerheight)/2),
+            size = (str(length) + "px", markerheight+"px"),
             stroke_width = 1,
             stroke = tagcolors["marker"],
             fill = tagcolors["marker"]))
@@ -798,7 +804,7 @@ for locus in locuslist:
         gspaint.add(gspaint.text(
             marker2,
             insert = ((begin - MinPos) / times + paintx0
-                       + (length - 7 * charnum) / 2, painty0 -20),
+                       + (length - 7 * charnum) / 2, painty0 - float(markerheight) / 2 + 3),
             font_size = 10,
             fill = 'red'))
 

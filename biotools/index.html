@@ -1,10 +1,179 @@
-<html>
-<title> GaCT生物信息网 </title>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html lang="cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="file:///D:/Program/XAMPP/htdocs/img/GACT.label.ico">
+<meta name="expires" content="Thu Dec 17 21:42:39 2015">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<title>GACT生物信息网主页</title>
+<meta name="keywords" content="gact">
+<meta name="description" content="gact">
+	<!-- Bootstrap core CSS -->
+	<link href="index_files/bootstrap.css" rel="stylesheet">
+	<!-- Add custom CSS here -->
+	<link href="index_files/modern-business.css" rel="stylesheet">
+	<link href="index_files/font-awesome.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-<h1 style="color:blue">基础生物信息工具网站</h1>
-by Polaris, 2015(目前仅支持内网访问)<br><br>
-1.基因结构信息图形绘制程序：<a href=PaintGeneStructure.html>Paint Gene Structure to svg Graph</a> <br>
-2.待开发
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://www.bioinfotools.cn/index.html"><img src="index_files/GACT.png" style="height:66px" class="navbar-left"></a><a class="navbar-brand" href="http://www.bioinfotools.cn/index.html"> &nbsp;&nbsp;&nbsp;生物信息网</a><a class="navbar-brand"> (目前仅支持内网访问)</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown">在线生物信息工具 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://www.bioinfotools.cn/biotools/PaintGeneStructure.html">基因结构图绘制</a></li>
+                <li><a href="http://www.bioinfotools.cn/biotools/PaintProteinDomain.html">蛋白结构域图绘制</a></li>
+                <li><a href="http://www.bioinfotools.cn/biotools/DrawNwkTree.html">Newick进化树绘图</a></li>
+                <li><a href="http://www.bioinfotools.cn/biotools/DrawNwkTreePaintProtDomain.html">进化树与结构域综合绘图</a></li>
+                <li><a href="">待开发</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+	<div id="myCarousel" class="carousel slide">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li class="" data-target="#myCarousel" data-slide-to="1"></li>
+			<li class="" data-target="#myCarousel" data-slide-to="2"></li>
+			<li class="" data-target="#myCarousel" data-slide-to="3"></li>
+
+		</ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner ">
+			<div class="item active">
+				<div class="fill" style="background-image:url('biotools/example/example.gff.jpg');"></div>
+				<div class="carousel-caption">
+				  <h1>基因结构矢量图</h1>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image:url('biotools/example/example.protein.jpg');"></div>
+				<div class="carousel-caption">
+				  <h1>蛋白结构域矢量图</h1>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image:url('biotools/example/example.nwk.jpg');"></div>
+				<div class="carousel-caption">
+				  <h1>进化树矢量图</h1>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image:url('biotools/example/example.nwk.protdomain.jpg');"></div>
+				<div class="carousel-caption">
+				  <h1>进化树与结构域矢量图</h1>
+				</div>
+			</div>
+			
+		</div>
+		<!-- Controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		  <span class="icon-prev"></span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		  <span class="icon-next"></span>
+		</a>
+	</div>
+
+    <div class="section">
+      <div class="container">
+        <div class="row">
+	      <!--
+          <div class="col-lg-12 col-md-12 text-center">
+            <a href="http://molquest.com/" traget="_blank"><img src="Softberry%20Home%20Page_files/Molquest.png" class="img-rounded"></a>
+            <div class="btn-group btn-group-lg">
+			  <a href="http://www.softberry.com/berry.phtml?topic=fdp.htm&amp;no_menu=on" class="btn btn-default" role="button">Downloads</a>
+			  <a href="http://www.softberry.com/berry.phtml?topic=products&amp;no_menu=on" class="btn btn-default" role="button">Products</a>
+                          <a href="http://www.softberry.com/berry.phtml?topic=service&amp;no_menu=on" class="btn btn-default" role="button">Services</a> 
+                          <a href="http://www.softberry.com/berry.phtml?topic=publish&amp;no_menu=on" class="btn btn-default" role="button">In publications</a>
+			  <a href="http://www.softberry.com/berry.phtml?topic=manag&amp;no_menu=on" class="btn btn-default" role="button">Management</a>
+			  <a href="http://www.softberry.com/berry.phtml?topic=contact&amp;no_menu=on" class="btn btn-default" role="button">Contacts</a>
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+		<div class="row">
+          <div class="col-lg-3 col-md-3">
+            <h3><img src="index_files/icon1_32.png"> <a href="http://www.bioinfotools.cn/biotools/PaintGeneStructure.html">基因结构绘图</a></h3>
+            <p>根据GFF格式文件信息或者指定sample格式信息进行基因结构的绘制，最终生成便于编辑的SVG矢量图。</p>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <h3><img src="index_files/icon3_32.png"> <a href="http://www.bioinfotools.cn/biotools/PaintProteinDomain.html">蛋白结构绘图</a></h3>
+            <p>根据指定格式的蛋白结构域等位置信息进行蛋白结构的绘制，最终生成便于编辑的SVG矢量图。</p>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <h3><img src="index_files/icon6_32.png"> <a href="http://www.bioinfotools.cn/biotools/DrawNwkTree.html">Newick进化树绘图</a></h3>
+            <p>根据指定newick格式的系统进化树信息进行SVG矢量图绘制。</p>
+          </div>          
+          <div class="col-lg-3 col-md-3">
+            <h3><img src="index_files/icon5_32.png"> <a href="http://www.bioinfotools.cn/biotools/DrawNwkTreePaintProtDomain.html">进化树与结构域综合绘图</a></h3>
+            <p>根据指定的蛋白结构域位置信息和相应的蛋白newick格式系统进化树信息进行SVG矢量图绘制，可用于基因家族分析。</p>
+          </div>
+        </div><!-- /.row -->
+      <div class="row">
+          <div class="col-lg-3 col-md-3">
+            <h3><img src="index_files/icon8_32.png"> <a href="">基因共线性分析</a></h3>
+            <p>开发中</p>
+          </div>
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.section -->
+
+
+    <div class="container">
+      <hr>
+      <footer>
+        <div class="row">
+          <div class="col-lg-12 pagination-centered">
+
+            <p></p><div class="pull-left">
+            <a>Copyright</a> © 2015 <a href="http://www.bioinfotools.cn/">www.bioinfotools.cn</a>            </div>
+            <div class="pull-right"><small><a href="http://www.bioinfotools.cn/private/"> by Polaris</a></small></div>
+            <p></p>
+          </div>
+
+        </div>
+      </footer>
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="index_files/jquery.js"></script>
+    <script src="index_files/bootstrap.js"></script>
+    <script src="index_files/modern-business.js"></script>
+    <script src="index_files/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      _uacct = "UA-225582-1";
+      urchinTracker();
+    </script>
+  
+
+
+</div></body></html>

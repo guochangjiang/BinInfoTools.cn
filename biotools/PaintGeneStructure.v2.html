@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/GACT.label.ico">
+<meta name="robots" content="noindex,nofollow"><meta name="expires" content="Thu Dec 17 21:52:04 2015">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<title>基因结构图绘制</title>
+<meta name="keywords" content="基因结构图绘制">
+<meta name="description" content="基因结构图绘制">
+	<!-- Bootstrap core CSS -->
+	<link href="PaintGeneStructure.v2_files/bootstrap.css" rel="stylesheet">
+	<!-- Add custom CSS here -->
+	<link href="PaintGeneStructure.v2_files/modern-business.css" rel="stylesheet">
+	<link href="PaintGeneStructure.v2_files/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="PaintGeneStructure.v2_files/chosen.css">    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../index.html"><img src="../index_files/GACT.png" style="height:66px" class="navbar-left"></a><a class="navbar-brand" href="../index.html"> &nbsp;&nbsp;&nbsp;<b>生物信息网</b></a><a class="navbar-brand"> <small>(目前仅支持内网访问)</small></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+             <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown">在线生物信息工具 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="PaintGeneStructure.v2.html">基因结构图绘制</a></li>
+                <li><a href="PaintProteinDomain.v2.html">蛋白结构域图绘制</a></li>
+                <li><a href="DrawNwkTree.v2.html">Newick进化树绘图</a></li>
+                <li><a href="DrawNwkTreePaintProtDomain.v2.html">进化树与结构域综合绘图</a></li>
+                <li><a href="">待开发</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 sidebar">
+            <ul class="nav nav-stacked nav-pills well">
+              <li><a href="../index.html">主页</a></li>
+              <li class="active"><a href="PaintGeneStructure.v2.html"><small>基因结构图绘制</small></a></li>
+              <li><a href="PaintProteinDomain.v2.html"><small>蛋白结构域图绘制</small></a></li>
+              <li><a href="DrawNwkTree.v2.html"><small>Newick进化树绘图</small></a></li>
+              <li><a href="DrawNwkTreePaintProtDomain.v2.html"><small>进化树与结构域综合绘图</small></a></li>
+              <li><a href=""><small>基因共线性分析</small></a></li>
+
+            </ul>
+
+
+        </div>
+        <div class="col-md-9 col-sm-8">
+<h1 class="page-header">绘图程序 <small>在线测试</small></h1><h2>基因结构绘图</h2>
+<p class="norm">
+根据<a href=example/gff.example.html>GFF格式</a>或指定的<a href=example/simple.example.html>simple格式</a>的基因结构信息进行SVG矢量图绘制，
+便于后续的编辑与处理。
+</p>
+<div align="center">
+<table background="PaintGeneStructure.v2_files/bg5.gif" border="0" cellpadding="0" cellspacing="16" width="100%">
+<tbody><tr><td width="100%">
+<form action="PaintGeneStructure.v1.2.py" enctype="multipart/form-data" method="post"><input name="PL4_group" value="programs" type="hidden">
+<input name="PL4_subgroup" value="gfind" type="hidden">
+<input name="PL4_topic" value="fgenesh" type="hidden">
+<p class="frm"><small>请将基因结构信息粘贴于此: </small>
+<br><textarea name="geneinfo" cols="70" rows="3" class="formtext"></textarea></p>
+<p class="frm">
+或者上传基因结构信息文件:<br>
+<input name="FILE" class="formtext" type="file"></p>
+
+<script type="text/javascript">
+  $(".chosen-select").chosen();
+</script>
+<p class="frm"><input value="开始绘制" class="formbutton" type="submit"><input value="重置" class="formbutton" type="reset"></p>
+<br><h4 style="color:blue">绘图参数设置</h4>
+信息格式: 
+<select name="formatbutton">
+<option value="gff" selected>GFF</option>
+<option value="simple">simple</option>
+</select><br><br>
+内含子位置判定<small>(如为GFF格式需指定，无exon时请指定CDS])</small>:<br> 
+	<input type="radio" name="refbutton" value="exon" checked> exon 
+	<input type="radio" name="refbutton" value="CDS"> CDS <br><br>
+内含子线型: <br> 
+	<input type="radio" name="intronline" value="直线" checked> 直线 
+	<input type="radio" name="intronline" value="折线"> 折线 <br><br>
+每kb图像长度:<br> <input type="text" name="pxperkb" value=250> [默认：250px] <br><br>
+矩形框高度:<br> <input type="text" name="rectheight" value=25> [默认：25px. 测试功能尽量设置更小值] <br><br>
+颜色指定:<br> <input type="text" name="colors" value="" style="width:400px"> [默认：内置方案] <br>指定方式: CDS:blue;domain:green <br>
+
+<h3>示例图片</h3>
+<img src="example/example.gff.svg"  alt="svg结构示例图" style="width:400px" />
+</form></td></tr></tbody></table></div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <div class="container">
+      <hr>
+      <footer>
+        <div class="row">
+          <div class="col-lg-12 pagination-centered">
+
+            <p></p><div class="pull-left">
+            <a>Copyright</a> © 2015 <a href="http://www.bioinfotools.cn/">www.bioinfotools.cn</a>            </div>
+            <div class="pull-right"><small><a href="http://www.bioinfotools.cn/private/"> by Polaris</a></small></div>
+            <p></p>
+          </div>
+
+        </div>
+      </footer>
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="PaintGeneStructure.v2_files/jquery.js"></script>
+    <script src="PaintGeneStructure.v2_files/bootstrap.js"></script>
+    <script src="PaintGeneStructure.v2_files/modern-business.js"></script>
+    <script src="PaintGeneStructure.v2_files/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      _uacct = "UA-225582-1";
+      urchinTracker();
+    </script>
+  
+
+
+</body></html>

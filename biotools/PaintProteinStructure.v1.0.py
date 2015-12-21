@@ -2,20 +2,19 @@
 
 import cgi
 import re
-#import os
+import cgitb
+cgitb.enable()
 
 print("Content-Type: text/html; charset=utf-8\n\n")
 
 form = cgi.FieldStorage()
-try:
+if form["FILE"].value.decode() == '':
     protinfo = form["proteininfo"].value
-except:
+else:
+    protinfo = re.sub("\r\n", "\n", form["FILE"].value.decode())
+if protinfo == '':
     print("<h2 style=\"color:red;font-size:20px\"> The information of protein structure cannnot be blank</h2>")
     #os._exit(0)
-
-
-
-
 
 ################
 ##子程序
